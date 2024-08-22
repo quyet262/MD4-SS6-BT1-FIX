@@ -6,7 +6,7 @@
 <body>
 <h3>Blogs</h3>
 <p>
-    <a th:href="@{/Blogs/create}">
+    <a th:href="@{/blogs/create}">
         Add new Blog
     </a>
 </p>
@@ -31,9 +31,9 @@
     <tr th:each="row,rowStat : ${blogs}">
         <td th:text="${row.getTitle()}"></td>
         <td th:text="${row.getAuthor()}"></td>
-        <td><a th:href="@{/customers/{id}/edit(id=${row.getId()})}">edit</a></td>
-        <td><a th:href="@{/customers/{id}/delete(id=${row.getId()})}">delete</a></td>
-        <td><a th:href="@{/customers/{id}/view(id=${row.getId()})}">view</a></td>
+        <td><a th:href="@{/blogs/{id}/edit(id=${row.getId()})}">edit</a></td>
+        <td><a th:href="@{/blogs/{id}/delete(id=${row.getId()})}">delete</a></td>
+        <td><a th:href="@{/blogs/{id}/view(id=${row.getId()})}">view</a></td>
     </tr>
     </tbody>
 </table>

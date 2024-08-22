@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="/layout :: head">
-    <title>UpdateCustomer</title>
+    <title>UpdateBlogs</title>
 </head>
 <body>
-<h3>Edit Customer</h3>
+<h3>Edit Blogs</h3>
 <p>
     <a th:href="@{/blogs}">
-        Back to customer list
+        Back to blogs list
     </a>
 </p>
 <div id="form">
@@ -21,10 +21,6 @@
         <div>
             <label for="content">Content</label>
             <input type="text" id="content" th:field="*{content}"/>
-        </div>
-        <div>
-            <label for="description">Description</label>
-            <input type="text" id="description" th:field="*{description}"/>
         </div>
         <div>
             <label for="author">Description</label>

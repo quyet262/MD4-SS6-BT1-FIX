@@ -1,5 +1,7 @@
 package com.example.demoappblog.configuration;
 
+import com.example.demoappblog.repository.BlogRepository;
+import com.example.demoappblog.repository.IBlogRepository;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -100,7 +102,7 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/blog1?createDatabaseIfNotExist=true&useSSL=false");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/blog?createDatabaseIfNotExist=true&useSSL=false");
         dataSource.setUsername("root");
         dataSource.setPassword("quyet2621994!");
         return dataSource;
@@ -118,6 +120,10 @@ public class AppConfiguration extends WebMvcConfigurerAdapter implements Applica
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(emf);
         return transactionManager;
+    }
+    @Bean
+    public IBlogRepository blogRepository() {
+        return new BlogRepository();
     }
 
 

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head th:replace="/layout :: head">
-    <title>Nguyen Duc Thao Nguyen</title>
+    <title>blogs</title>
 </head>
 
 <body>
-<h3>Add Customer</h3>
+<h3>Add blogs</h3>
 <p>
     <a th:href="@{/blogs}">
-        Back to customer list
+        Back to blogs list
     </a>
 </p>
 <div id="form">
@@ -22,10 +22,6 @@
         <div>
             <label for="content">Content: </label>
             <input type="text" id="content" th:field="*{content}"/>
-        </div>
-        <div>
-            <label for="description">Description: </label>
-            <input type="text" id="description" th:field="*{description}"/>
         </div>
         <div>
             <label for="author">Author: </label>
